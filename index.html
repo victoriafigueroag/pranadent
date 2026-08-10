@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,10 +14,21 @@
   <meta name="author" content="PRANADENT Clínica Dental y Estética">
 
   <meta property="og:title" content="PRANADENT | Clínica Dental y Estética en Quintero">
-  <meta property="og:description" content="Cuidamos tu sonrisa con atención odontológica profesional en Quintero.">
+  <meta property="og:description" content="Atención odontológica profesional y cercana en Quintero.">
   <meta property="og:type" content="website">
 
   <style>
+
+    :root {
+      --calipso: #27B9B5;
+      --calipso-dark: #159B98;
+      --calipso-light: #EAF9F8;
+      --text: #333333;
+      --gray: #666666;
+      --light: #F7FBFB;
+      --white: #FFFFFF;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -29,8 +41,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #333;
-      background: #ffffff;
+      color: var(--text);
+      background: var(--white);
       line-height: 1.6;
     }
 
@@ -44,10 +56,13 @@
       display: block;
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
-      background: #ffffff;
+      background: rgba(255,255,255,0.97);
       border-bottom: 1px solid #eeeeee;
       position: sticky;
       top: 0;
@@ -57,51 +72,65 @@
     .nav-container {
       max-width: 1150px;
       margin: auto;
-      padding: 14px 25px;
+      min-height: 92px;
+      padding: 8px 25px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
     }
 
+    /*
+      El logo tiene margen blanco dentro del archivo.
+      Aumentamos su tamaño para que el logo visible
+      tenga mayor presencia.
+    */
+
     .logo {
-      width: 155px;
+      width: 225px;
+      height: 76px;
+      object-fit: contain;
+      object-position: center;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 26px;
     }
 
     nav a {
       font-size: 15px;
       font-weight: 600;
-      color: #444;
+      color: #444444;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #8c5a75;
+      color: var(--calipso-dark);
     }
 
     .nav-button {
-      background: #8c5a75;
+      background: var(--calipso);
       color: white !important;
-      padding: 11px 18px;
-      border-radius: 25px;
+      padding: 12px 20px;
+      border-radius: 28px;
     }
 
     .nav-button:hover {
-      background: #70445d;
+      background: var(--calipso-dark);
+      transform: translateY(-1px);
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       max-width: 1150px;
       margin: auto;
-      padding: 70px 25px;
+      padding: 72px 25px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
@@ -109,21 +138,21 @@
     }
 
     .hero-text h1 {
-      font-size: 48px;
-      line-height: 1.15;
-      color: #333;
+      font-size: 50px;
+      line-height: 1.12;
+      color: var(--text);
       margin-bottom: 20px;
     }
 
     .hero-text h1 span {
-      color: #8c5a75;
+      color: var(--calipso);
     }
 
     .hero-text p {
       font-size: 19px;
-      color: #666;
+      color: var(--gray);
       margin-bottom: 30px;
-      max-width: 520px;
+      max-width: 530px;
     }
 
     .hero-buttons {
@@ -134,36 +163,36 @@
 
     .button {
       display: inline-block;
-      padding: 14px 24px;
+      padding: 14px 25px;
       border-radius: 28px;
       font-weight: bold;
       transition: 0.3s;
     }
 
     .button-primary {
-      background: #8c5a75;
+      background: var(--calipso);
       color: white;
     }
 
     .button-primary:hover {
-      background: #70445d;
+      background: var(--calipso-dark);
       transform: translateY(-2px);
     }
 
     .button-secondary {
-      border: 1px solid #8c5a75;
-      color: #8c5a75;
+      border: 1.5px solid var(--calipso);
+      color: var(--calipso-dark);
       background: white;
     }
 
     .button-secondary:hover {
-      background: #faf5f7;
+      background: var(--calipso-light);
     }
 
     .hero-image {
-      border-radius: 20px;
+      border-radius: 22px;
       overflow: hidden;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
     }
 
     .hero-image img {
@@ -172,7 +201,10 @@
       object-fit: cover;
     }
 
-    /* GENERAL SECTIONS */
+
+    /* =========================
+       SECCIONES
+    ========================= */
 
     section {
       padding: 75px 25px;
@@ -189,20 +221,33 @@
     }
 
     .section-title h2 {
-      font-size: 34px;
-      color: #333;
+      font-size: 35px;
+      color: var(--text);
       margin-bottom: 10px;
     }
 
+    .section-title h2::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 3px;
+      background: var(--calipso);
+      margin: 13px auto 0;
+      border-radius: 3px;
+    }
+
     .section-title p {
-      color: #777;
+      color: #777777;
       font-size: 17px;
     }
 
-    /* ABOUT */
+
+    /* =========================
+       NOSOTROS
+    ========================= */
 
     .about {
-      background: #faf7f8;
+      background: var(--calipso-light);
     }
 
     .about-grid {
@@ -213,8 +258,9 @@
     }
 
     .about-image {
-      border-radius: 18px;
+      border-radius: 20px;
       overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
     }
 
     .about-image img {
@@ -224,22 +270,25 @@
     }
 
     .about-text h2 {
-      font-size: 34px;
+      font-size: 35px;
       margin-bottom: 20px;
-      color: #333;
+      color: var(--text);
     }
 
     .about-text h2 span {
-      color: #8c5a75;
+      color: var(--calipso-dark);
     }
 
     .about-text p {
-      color: #666;
+      color: var(--gray);
       margin-bottom: 15px;
       font-size: 17px;
     }
 
-    /* SERVICES */
+
+    /* =========================
+       SERVICIOS
+    ========================= */
 
     .services-grid {
       display: grid;
@@ -249,10 +298,11 @@
 
     .service {
       padding: 30px;
-      border: 1px solid #eeeeee;
-      border-radius: 16px;
+      border: 1px solid #e5eeee;
+      border-radius: 17px;
       background: white;
       box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+      border-top: 4px solid var(--calipso);
       transition: 0.3s;
     }
 
@@ -262,19 +312,22 @@
     }
 
     .service h3 {
-      color: #8c5a75;
+      color: var(--calipso-dark);
       font-size: 21px;
       margin-bottom: 10px;
     }
 
     .service p {
-      color: #666;
+      color: var(--gray);
     }
 
-    /* GALLERY */
+
+    /* =========================
+       GALERÍA
+    ========================= */
 
     .gallery {
-      background: #faf7f8;
+      background: var(--light);
     }
 
     .gallery-grid {
@@ -287,6 +340,7 @@
       border-radius: 18px;
       overflow: hidden;
       box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      background: white;
     }
 
     .gallery-item img {
@@ -300,76 +354,90 @@
       transform: scale(1.03);
     }
 
-    /* CONTACT */
+
+    /* =========================
+       CONTACTO
+    ========================= */
 
     .contact {
       background: white;
     }
 
     .contact-box {
-      background: #faf7f8;
+      background: var(--calipso-light);
+      border: 1px solid #d9f0ef;
       border-radius: 22px;
-      padding: 45px;
+      padding: 50px 35px;
       text-align: center;
       max-width: 850px;
       margin: auto;
     }
 
     .contact-box h2 {
-      font-size: 34px;
+      font-size: 35px;
       margin-bottom: 15px;
     }
 
     .contact-box p {
-      color: #666;
+      color: var(--gray);
       font-size: 17px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .address {
-      margin: 20px 0 28px;
+      margin: 22px 0 30px;
       font-weight: 600;
-      color: #555;
+      color: #555555;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      background: #333;
+      background: #333333;
       color: white;
-      padding: 35px 25px;
+      padding: 38px 25px;
       text-align: center;
     }
 
+    /*
+      No aplicamos filtros al logo.
+      Queremos que conserve sus colores originales.
+    */
+
     footer img {
-      width: 130px;
+      width: 165px;
+      height: 65px;
+      object-fit: contain;
       margin: 0 auto 15px;
-      filter: brightness(0) invert(1);
     }
 
     footer p {
-      color: #ddd;
+      color: #dddddd;
       font-size: 14px;
       margin: 5px 0;
     }
 
-    /* WHATSAPP FLOATING BUTTON */
+
+    /* =========================
+       WHATSAPP
+    ========================= */
 
     .whatsapp {
       position: fixed;
       right: 22px;
       bottom: 22px;
-      width: 58px;
-      height: 58px;
+      width: 60px;
+      height: 60px;
       background: #25D366;
       color: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 27px;
-      font-weight: bold;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.20);
+      box-shadow: 0 5px 18px rgba(0,0,0,0.22);
       z-index: 2000;
       transition: 0.3s;
     }
@@ -378,20 +446,31 @@
       transform: scale(1.08);
     }
 
-    /* MOBILE */
+    .whatsapp svg {
+      width: 34px;
+      height: 34px;
+      fill: white;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 800px) {
 
       .nav-container {
-        padding: 12px 18px;
+        min-height: 78px;
+        padding: 6px 15px;
       }
 
       .logo {
-        width: 125px;
+        width: 180px;
+        height: 65px;
       }
 
       nav {
-        gap: 10px;
+        gap: 8px;
       }
 
       nav a:not(.nav-button) {
@@ -405,12 +484,12 @@
 
       .hero {
         grid-template-columns: 1fr;
-        padding: 45px 20px;
+        padding: 48px 20px;
         gap: 35px;
       }
 
       .hero-text h1 {
-        font-size: 36px;
+        font-size: 38px;
       }
 
       .hero-text p {
@@ -422,11 +501,11 @@
       }
 
       section {
-        padding: 55px 20px;
+        padding: 58px 20px;
       }
 
       .section-title h2 {
-        font-size: 29px;
+        font-size: 30px;
       }
 
       .about-grid {
@@ -436,6 +515,10 @@
 
       .about-image img {
         height: 300px;
+      }
+
+      .about-text h2 {
+        font-size: 30px;
       }
 
       .services-grid {
@@ -451,47 +534,82 @@
       }
 
       .contact-box {
-        padding: 30px 20px;
+        padding: 35px 20px;
       }
 
       .contact-box h2 {
-        font-size: 29px;
+        font-size: 30px;
+      }
+
+      .whatsapp {
+        width: 58px;
+        height: 58px;
+        right: 18px;
+        bottom: 18px;
+      }
+
+      .whatsapp svg {
+        width: 32px;
+        height: 32px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
+
     <div class="nav-container">
 
       <a href="#inicio">
-        <img src="logo.webp" alt="PRANADENT Clínica Dental y Estética" class="logo">
+
+        <img
+          src="logo.webp"
+          alt="PRANADENT Clínica Dental y Estética"
+          class="logo">
+
       </a>
 
+
       <nav>
+
         <a href="#nosotros">Nosotros</a>
+
         <a href="#servicios">Servicios</a>
+
         <a href="#contacto">Contacto</a>
 
         <a
           href="https://wa.me/56921133611?text=Hola%20PRANADENT,%20quisiera%20consultar%20por%20una%20hora"
           target="_blank"
           class="nav-button">
+
           Agendar hora
+
         </a>
+
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       CONTENIDO
+  ========================= -->
 
   <main>
+
+
+    <!-- HERO -->
 
     <section class="hero" id="inicio">
 
@@ -514,24 +632,35 @@
             href="https://wa.me/56921133611?text=Hola%20PRANADENT,%20quisiera%20agendar%20una%20hora"
             target="_blank"
             class="button button-primary">
+
             Agendar hora
+
           </a>
 
-          <a href="#servicios" class="button button-secondary">
+
+          <a
+            href="#servicios"
+            class="button button-secondary">
+
             Ver servicios
+
           </a>
 
         </div>
 
       </div>
 
+
       <div class="hero-image">
+
         <img
           src="fachada.webp"
           alt="PRANADENT Clínica Dental y Estética en Quintero">
+
       </div>
 
     </section>
+
 
 
     <!-- NOSOTROS -->
@@ -542,11 +671,15 @@
 
         <div class="about-grid">
 
+
           <div class="about-image">
+
             <img
               src="atencion1.webp"
               alt="Atención odontológica en PRANADENT Quintero">
+
           </div>
+
 
           <div class="about-text">
 
@@ -555,9 +688,9 @@
             </h2>
 
             <p>
-              Somos una clínica dental y estética ubicada en
-              Quintero, dedicada al cuidado integral de la salud
-              bucal de nuestros pacientes.
+              Somos una clínica dental y estética ubicada
+              en Quintero, dedicada al cuidado integral de
+              la salud bucal de nuestros pacientes.
             </p>
 
             <p>
@@ -581,11 +714,13 @@
     </section>
 
 
+
     <!-- SERVICIOS -->
 
     <section id="servicios">
 
       <div class="section-container">
+
 
         <div class="section-title">
 
@@ -600,6 +735,7 @@
 
 
         <div class="services-grid">
+
 
           <div class="service">
 
@@ -648,6 +784,7 @@
 
           </div>
 
+
         </div>
 
       </div>
@@ -655,11 +792,13 @@
     </section>
 
 
+
     <!-- GALERÍA -->
 
     <section class="gallery">
 
       <div class="section-container">
+
 
         <div class="section-title">
 
@@ -675,12 +814,13 @@
 
         <div class="gallery-grid">
 
+
           <div class="gallery-item">
 
             <img
               src="atencion1.webp"
               alt="Atención dental en PRANADENT">
-          
+
           </div>
 
 
@@ -689,8 +829,9 @@
             <img
               src="atencion2.webp"
               alt="Atención odontológica en PRANADENT">
-          
+
           </div>
+
 
         </div>
 
@@ -699,24 +840,27 @@
     </section>
 
 
+
     <!-- CONTACTO -->
 
     <section class="contact" id="contacto">
 
       <div class="section-container">
 
+
         <div class="contact-box">
 
           <h2>Agenda tu atención</h2>
 
           <p>
-            ¿Quieres consultar por un tratamiento o
-            agendar una hora?
+            ¿Quieres consultar por un tratamiento
+            o agendar una hora?
           </p>
 
           <p>
             Escríbenos directamente por WhatsApp.
           </p>
+
 
           <div class="address">
 
@@ -724,6 +868,7 @@
             Quintero, Región de Valparaíso, Chile
 
           </div>
+
 
           <a
             href="https://wa.me/56921133611?text=Hola%20PRANADENT,%20quisiera%20consultar%20por%20una%20hora"
@@ -743,7 +888,10 @@
   </main>
 
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -766,7 +914,10 @@
   </footer>
 
 
-  <!-- WHATSAPP -->
+
+  <!-- =========================
+       BOTÓN WHATSAPP
+  ========================= -->
 
   <a
     href="https://wa.me/56921133611?text=Hola%20PRANADENT,%20quisiera%20agendar%20una%20hora"
@@ -774,9 +925,18 @@
     class="whatsapp"
     aria-label="Contactar a PRANADENT por WhatsApp">
 
-    ☎
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true">
+
+      <path d="M19.11 17.39c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.14-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.53-.44-.46-.6-.47h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22s.96 2.57 1.09 2.75c.13.18 1.89 2.89 4.58 4.05.64.28 1.14.45 1.53.57.64.2 1.22.17 1.68.1.51-.08 1.58-.65 1.8-1.27.22-.62.22-1.15.16-1.27-.07-.11-.25-.18-.52-.31z"/>
+
+      <path d="M16.01 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.46 1.72 6.4L3.1 28.8l6.55-1.72a12.78 12.78 0 0 0 6.36 1.68h.01c7.06 0 12.8-5.74 12.8-12.8S23.07 3.2 16.01 3.2zm0 23.43h-.01a10.61 10.61 0 0 1-5.4-1.48l-.39-.23-3.89 1.02 1.04-3.79-.25-.4a10.62 10.62 0 1 1 8.9 4.88z"/>
+
+    </svg>
 
   </a>
 
 </body>
 </html>
+```
