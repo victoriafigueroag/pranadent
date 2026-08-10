@@ -4,9 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PRANADENT | Clínica Dental en Quintero</title>
+  <title>PRANADENT | Clínica Dental y Estética en Quintero</title>
 
-  <meta name="description" content="PRANADENT, clínica dental en Quintero. Atención odontológica, estética dental, prevención y cuidado de la salud bucal en la Región de Valparaíso.">
+  <meta name="description" content="PRANADENT Clínica Dental y Estética en Quintero. Odontología general, estética dental, limpieza dental y atención odontológica. Agenda tu hora en Alonso de Quintero 114, local 5.">
+
+  <meta name="keywords" content="dentista Quintero, clínica dental Quintero, PRANADENT, odontólogo Quintero, limpieza dental Quintero, estética dental Quintero">
+
+  <meta name="author" content="PRANADENT Clínica Dental y Estética">
+
+  <meta property="og:title" content="PRANADENT | Clínica Dental y Estética en Quintero">
+  <meta property="og:description" content="Cuidamos tu sonrisa con atención odontológica profesional en Quintero.">
+  <meta property="og:type" content="website">
 
   <style>
     * {
@@ -15,140 +23,439 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
       background: #ffffff;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* HEADER */
+
     header {
       background: #ffffff;
-      padding: 22px 20px;
-      text-align: center;
       border-bottom: 1px solid #eeeeee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header h1 {
-      font-size: 32px;
-      letter-spacing: 2px;
-      color: #1f4f5f;
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 14px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    header p {
-      color: #666;
-      margin-top: 5px;
+    .logo {
+      width: 155px;
     }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: #444;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #8c5a75;
+    }
+
+    .nav-button {
+      background: #8c5a75;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 25px;
+    }
+
+    .nav-button:hover {
+      background: #70445d;
+    }
+
+    /* HERO */
 
     .hero {
-      background: #eef7f8;
-      padding: 75px 20px;
-      text-align: center;
+      max-width: 1150px;
+      margin: auto;
+      padding: 70px 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
     }
 
-    .hero h2 {
-      font-size: 40px;
-      color: #1f4f5f;
-      margin-bottom: 15px;
+    .hero-text h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      color: #333;
+      margin-bottom: 20px;
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 28px;
-      font-size: 18px;
-      color: #555;
+    .hero-text h1 span {
+      color: #8c5a75;
+    }
+
+    .hero-text p {
+      font-size: 19px;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
-      background: #1f4f5f;
-      color: white;
-      padding: 14px 25px;
-      border-radius: 8px;
-      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 28px;
       font-weight: bold;
-      margin: 5px;
+      transition: 0.3s;
     }
 
-    .button:hover {
-      opacity: 0.9;
+    .button-primary {
+      background: #8c5a75;
+      color: white;
     }
+
+    .button-primary:hover {
+      background: #70445d;
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      border: 1px solid #8c5a75;
+      color: #8c5a75;
+      background: white;
+    }
+
+    .button-secondary:hover {
+      background: #faf5f7;
+    }
+
+    .hero-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+    }
+
+    /* GENERAL SECTIONS */
 
     section {
-      padding: 60px 20px;
+      padding: 75px 25px;
+    }
+
+    .section-container {
       max-width: 1100px;
       margin: auto;
     }
 
-    section h2 {
+    .section-title {
       text-align: center;
-      color: #1f4f5f;
-      margin-bottom: 35px;
-      font-size: 30px;
+      margin-bottom: 45px;
     }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .service {
-      padding: 28px 22px;
-      border: 1px solid #eeeeee;
-      border-radius: 12px;
-      text-align: center;
-      background: white;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
-    }
-
-    .service h3 {
-      color: #1f4f5f;
+    .section-title h2 {
+      font-size: 34px;
+      color: #333;
       margin-bottom: 10px;
     }
 
-    .about {
-      background: #f8f8f8;
-      max-width: none;
-      text-align: center;
+    .section-title p {
+      color: #777;
+      font-size: 17px;
     }
 
-    .about p {
-      max-width: 800px;
+    /* ABOUT */
+
+    .about {
+      background: #faf7f8;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+    }
+
+    .about-text h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .about-text h2 span {
+      color: #8c5a75;
+    }
+
+    .about-text p {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .service {
+      padding: 30px;
+      border: 1px solid #eeeeee;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .service h3 {
+      color: #8c5a75;
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      color: #666;
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      background: #faf7f8;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .gallery-item {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-box {
+      background: #faf7f8;
+      border-radius: 22px;
+      padding: 45px;
+      text-align: center;
+      max-width: 850px;
       margin: auto;
     }
 
-    .contact {
-      text-align: center;
+    .contact-box h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
     }
 
-    .contact-info {
-      margin-top: 25px;
-      line-height: 2;
+    .contact-box p {
+      color: #666;
+      font-size: 17px;
+      margin-bottom: 10px;
     }
+
+    .address {
+      margin: 20px 0 28px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    /* FOOTER */
 
     footer {
-      background: #1f4f5f;
+      background: #333;
       color: white;
+      padding: 35px 25px;
       text-align: center;
-      padding: 25px 20px;
     }
 
-    @media (max-width: 600px) {
+    footer img {
+      width: 130px;
+      margin: 0 auto 15px;
+      filter: brightness(0) invert(1);
+    }
+
+    footer p {
+      color: #ddd;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    /* WHATSAPP FLOATING BUTTON */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      font-weight: bold;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.20);
+      z-index: 2000;
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-container {
+        padding: 12px 18px;
+      }
+
+      .logo {
+        width: 125px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a:not(.nav-button) {
+        display: none;
+      }
+
+      .nav-button {
+        padding: 9px 14px;
+        font-size: 13px;
+      }
+
       .hero {
-        padding: 55px 20px;
+        grid-template-columns: 1fr;
+        padding: 45px 20px;
+        gap: 35px;
       }
 
-      .hero h2 {
-        font-size: 30px;
+      .hero-text h1 {
+        font-size: 36px;
       }
 
-      header h1 {
-        font-size: 27px;
+      .hero-text p {
+        font-size: 17px;
+      }
+
+      .hero-image img {
+        height: 300px;
       }
 
       section {
-        padding: 45px 20px;
+        padding: 55px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .about-image img {
+        height: 300px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item img {
+        height: 280px;
+      }
+
+      .contact-box {
+        padding: 30px 20px;
+      }
+
+      .contact-box h2 {
+        font-size: 29px;
       }
     }
   </style>
@@ -156,100 +463,320 @@
 
 <body>
 
-<header>
-  <h1>PRANADENT</h1>
-  <p>Clínica Dental en Quintero</p>
-</header>
+  <!-- HEADER -->
 
-<section class="hero">
-  <h2>Tu salud dental, en buenas manos</h2>
+  <header>
+    <div class="nav-container">
 
-  <p>
-    Atención odontológica cercana y profesional en Quintero,
-    Región de Valparaíso.
-  </p>
+      <a href="#inicio">
+        <img src="logo.webp" alt="PRANADENT Clínica Dental y Estética" class="logo">
+      </a>
 
-  <a class="button" href="https://wa.me/56921133611">
-    Reservar hora por WhatsApp
+      <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+
+        <a
+          href="https://wa.me/56921133611?text=Hola%20PRANADENT,%20quisiera%20consultar%20por%20una%20hora"
+          target="_blank"
+          class="nav-button">
+          Agendar hora
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-text">
+
+        <h1>
+          Tu sonrisa,<br>
+          <span>nuestro cuidado.</span>
+        </h1>
+
+        <p>
+          En PRANADENT Clínica Dental y Estética
+          entregamos atención odontológica profesional
+          y cercana para cuidar tu salud y tu sonrisa.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="https://wa.me/56921133611?text=Hola%20PRANADENT,%20quisiera%20agendar%20una%20hora"
+            target="_blank"
+            class="button button-primary">
+            Agendar hora
+          </a>
+
+          <a href="#servicios" class="button button-secondary">
+            Ver servicios
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="fachada.webp"
+          alt="PRANADENT Clínica Dental y Estética en Quintero">
+      </div>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+
+    <section class="about" id="nosotros">
+
+      <div class="section-container">
+
+        <div class="about-grid">
+
+          <div class="about-image">
+            <img
+              src="atencion1.webp"
+              alt="Atención odontológica en PRANADENT Quintero">
+          </div>
+
+          <div class="about-text">
+
+            <h2>
+              Conoce <span>PRANADENT</span>
+            </h2>
+
+            <p>
+              Somos una clínica dental y estética ubicada en
+              Quintero, dedicada al cuidado integral de la salud
+              bucal de nuestros pacientes.
+            </p>
+
+            <p>
+              Buscamos entregar una atención profesional,
+              cercana y personalizada, acompañando a cada
+              paciente de acuerdo con sus necesidades.
+            </p>
+
+            <p>
+              Nuestro objetivo es que cada persona se sienta
+              cómoda y bien atendida durante su experiencia
+              en PRANADENT.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICIOS -->
+
+    <section id="servicios">
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <h2>Nuestros servicios</h2>
+
+          <p>
+            Atención odontológica para cuidar tu salud
+            y mantener una sonrisa saludable.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <div class="service">
+
+            <h3>Odontología general</h3>
+
+            <p>
+              Atención y cuidado integral de la salud bucal
+              según las necesidades de cada paciente.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <h3>Estética dental</h3>
+
+            <p>
+              Tratamientos orientados a mejorar la estética
+              y apariencia de tu sonrisa.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <h3>Limpieza dental</h3>
+
+            <p>
+              Prevención y cuidado para mantener una buena
+              higiene y salud oral.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <h3>Urgencias dentales</h3>
+
+            <p>
+              Atención odontológica según disponibilidad
+              y evaluación profesional.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALERÍA -->
+
+    <section class="gallery">
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <h2>Nuestra clínica</h2>
+
+          <p>
+            Un espacio pensado para entregar una atención
+            cómoda y cercana.
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+
+            <img
+              src="atencion1.webp"
+              alt="Atención dental en PRANADENT">
+          
+          </div>
+
+
+          <div class="gallery-item">
+
+            <img
+              src="atencion2.webp"
+              alt="Atención odontológica en PRANADENT">
+          
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+
+    <section class="contact" id="contacto">
+
+      <div class="section-container">
+
+        <div class="contact-box">
+
+          <h2>Agenda tu atención</h2>
+
+          <p>
+            ¿Quieres consultar por un tratamiento o
+            agendar una hora?
+          </p>
+
+          <p>
+            Escríbenos directamente por WhatsApp.
+          </p>
+
+          <div class="address">
+
+            📍 Alonso de Quintero 114, local 5<br>
+            Quintero, Región de Valparaíso, Chile
+
+          </div>
+
+          <a
+            href="https://wa.me/56921133611?text=Hola%20PRANADENT,%20quisiera%20consultar%20por%20una%20hora"
+            target="_blank"
+            class="button button-primary">
+
+            Contactar por WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <img
+      src="logo.webp"
+      alt="PRANADENT Clínica Dental y Estética">
+
+    <p>
+      PRANADENT Clínica Dental y Estética
+    </p>
+
+    <p>
+      Alonso de Quintero 114, local 5 · Quintero
+    </p>
+
+    <p>
+      © 2026 PRANADENT. Todos los derechos reservados.
+    </p>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    href="https://wa.me/56921133611?text=Hola%20PRANADENT,%20quisiera%20agendar%20una%20hora"
+    target="_blank"
+    class="whatsapp"
+    aria-label="Contactar a PRANADENT por WhatsApp">
+
+    ☎
+
   </a>
-
-  <a class="button" href="#servicios">
-    Ver servicios
-  </a>
-</section>
-
-<section id="servicios">
-  <h2>Nuestros servicios</h2>
-
-  <div class="services">
-
-    <div class="service">
-      <h3>Odontología general</h3>
-      <p>
-        Atención y cuidado integral de la salud bucal
-        según las necesidades de cada paciente.
-      </p>
-    </div>
-
-    <div class="service">
-      <h3>Estética dental</h3>
-      <p>
-        Tratamientos orientados a mejorar la estética
-        y apariencia de tu sonrisa.
-      </p>
-    </div>
-
-    <div class="service">
-      <h3>Limpieza dental</h3>
-      <p>
-        Prevención y cuidado para mantener una buena
-        higiene y salud oral.
-      </p>
-    </div>
-
-    <div class="service">
-      <h3>Urgencias dentales</h3>
-      <p>
-        Atención odontológica según disponibilidad
-        y evaluación profesional.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="about">
-  <h2>PRANADENT Clínica Dental</h2>
-
-  <p>
-    PRANADENT es una clínica dental ubicada en Quintero,
-    Región de Valparaíso. Nuestro objetivo es entregar
-    una atención odontológica cercana, profesional y
-    enfocada en las necesidades de cada paciente.
-  </p>
-</section>
-
-<section id="contacto" class="contact">
-  <h2>Agenda tu hora</h2>
-
-  <p>
-    Comunícate con nosotros para consultar disponibilidad
-    y reservar tu atención dental.
-  </p>
-
-  <a class="button" href="https://wa.me/56921133611">
-    Contactar por WhatsApp
-  </a>
-
-  <div class="contact-info">
-    <p>📍 Quintero, Región de Valparaíso</p>
-    <p>📱 +56 9 2113 3611</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 PRANADENT Clínica Dental en Quintero</p>
-</footer>
 
 </body>
 </html>
