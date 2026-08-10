@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PRANADENT | Clínica Dental en Quintero</title>
+
+  <meta name="description" content="PRANADENT, clínica dental en Quintero. Atención odontológica, estética dental, prevención y cuidado de la salud bucal en la Región de Valparaíso.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #222;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 22px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    header h1 {
+      font-size: 32px;
+      letter-spacing: 2px;
+      color: #1f4f5f;
+    }
+
+    header p {
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .hero {
+      background: #eef7f8;
+      padding: 75px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      color: #1f4f5f;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1f4f5f;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #1f4f5f;
+      margin-bottom: 35px;
+      font-size: 30px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      padding: 28px 22px;
+      border: 1px solid #eeeeee;
+      border-radius: 12px;
+      text-align: center;
+      background: white;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+
+    .service h3 {
+      color: #1f4f5f;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background: #f8f8f8;
+      max-width: none;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-top: 25px;
+      line-height: 2;
+    }
+
+    footer {
+      background: #1f4f5f;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 55px 20px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      header h1 {
+        font-size: 27px;
+      }
+
+      section {
+        padding: 45px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>PRANADENT</h1>
+  <p>Clínica Dental en Quintero</p>
+</header>
+
+<section class="hero">
+  <h2>Tu salud dental, en buenas manos</h2>
+
+  <p>
+    Atención odontológica cercana y profesional en Quintero,
+    Región de Valparaíso.
+  </p>
+
+  <a class="button" href="https://wa.me/56921133611">
+    Reservar hora por WhatsApp
+  </a>
+
+  <a class="button" href="#servicios">
+    Ver servicios
+  </a>
+</section>
+
+<section id="servicios">
+  <h2>Nuestros servicios</h2>
+
+  <div class="services">
+
+    <div class="service">
+      <h3>Odontología general</h3>
+      <p>
+        Atención y cuidado integral de la salud bucal
+        según las necesidades de cada paciente.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Estética dental</h3>
+      <p>
+        Tratamientos orientados a mejorar la estética
+        y apariencia de tu sonrisa.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Limpieza dental</h3>
+      <p>
+        Prevención y cuidado para mantener una buena
+        higiene y salud oral.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Urgencias dentales</h3>
+      <p>
+        Atención odontológica según disponibilidad
+        y evaluación profesional.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="about">
+  <h2>PRANADENT Clínica Dental</h2>
+
+  <p>
+    PRANADENT es una clínica dental ubicada en Quintero,
+    Región de Valparaíso. Nuestro objetivo es entregar
+    una atención odontológica cercana, profesional y
+    enfocada en las necesidades de cada paciente.
+  </p>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Agenda tu hora</h2>
+
+  <p>
+    Comunícate con nosotros para consultar disponibilidad
+    y reservar tu atención dental.
+  </p>
+
+  <a class="button" href="https://wa.me/56921133611">
+    Contactar por WhatsApp
+  </a>
+
+  <div class="contact-info">
+    <p>📍 Quintero, Región de Valparaíso</p>
+    <p>📱 +56 9 2113 3611</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 PRANADENT Clínica Dental en Quintero</p>
+</footer>
+
+</body>
+</html>
